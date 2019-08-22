@@ -79,7 +79,7 @@ def main():
         raise ValueError(
             "Can't get samples longer than window size: %s" % hparams.n_ctx)
 
-    if args.model_name == '345M':
+    if args.model_name == '345M' or args.model_name == '774M':
         args.memory_saving_gradients = True
         if args.optimizer == 'adam':
             args.only_train_transformer_layers = True
